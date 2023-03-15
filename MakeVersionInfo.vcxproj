@@ -19,14 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Get-VersionInfo.ps1" />
-    <None Include="InitVersionInfo-example.bat" />
+    <None Include="init-version-info-example.bat" />
     <None Include="make-version-file.py" />
     <None Include="Makefile" />
     <None Include="update-version-info.py" />
     <None Include="Version-example.txttemplate" />
-    <None Include="Write-FileWithVersionInfo.ps1" />
-    <None Include="Write-VersionInfo.ps1" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{16B5A139-F460-440A-9817-745A5A1663EC}</ProjectGuid>
