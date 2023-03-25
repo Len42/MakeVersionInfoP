@@ -82,12 +82,14 @@ nmake /nologo all</NMakeBuildCommandLine>
 
 nmake /nologo clean</NMakeCleanCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)init-version-info.bat"
+
+nmake /nologo clean
 git -C "$(SolutionDir) " describe --tags --always --dirty &gt;"$(SolutionDir)version-temp"
 
 py "./update-version-info.py" "$(SolutionDir)version-info" "$(SolutionDir)version-temp"
 
 
-nmake /nologo rebuild</NMakeReBuildCommandLine>
+nmake /nologo all</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -103,12 +105,14 @@ nmake /nologo all</NMakeBuildCommandLine>
 
 nmake /nologo clean</NMakeCleanCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)init-version-info.bat"
+
+nmake /nologo clean
 git -C "$(SolutionDir) " describe --tags --always --dirty &gt;"$(SolutionDir)version-temp"
 
 py "./update-version-info.py" "$(SolutionDir)version-info" "$(SolutionDir)version-temp"
 
 
-nmake /nologo rebuild</NMakeReBuildCommandLine>
+nmake /nologo all</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -120,12 +124,14 @@ py "./update-version-info.py" "$(SolutionDir)version-info" "$(SolutionDir)versio
 
 nmake /nologo all</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)init-version-info.bat"
+
+nmake /nologo clean
 git -C "$(SolutionDir) " describe --tags --always --dirty &gt;"$(SolutionDir)version-temp"
 
 py "./update-version-info.py" "$(SolutionDir)version-info" "$(SolutionDir)version-temp"
 
 
-nmake /nologo rebuild</NMakeReBuildCommandLine>
+nmake /nologo all</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)init-version-info.bat"
 
 nmake /nologo clean</NMakeCleanCommandLine>
@@ -140,12 +146,14 @@ py "./update-version-info.py" "$(SolutionDir)version-info" "$(SolutionDir)versio
 
 nmake /nologo all</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)init-version-info.bat"
+
+nmake /nologo clean
 git -C "$(SolutionDir) " describe --tags --always --dirty &gt;"$(SolutionDir)version-temp"
 
 py "./update-version-info.py" "$(SolutionDir)version-info" "$(SolutionDir)version-temp"
 
 
-nmake /nologo rebuild</NMakeReBuildCommandLine>
+nmake /nologo all</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)init-version-info.bat"
 
 nmake /nologo clean</NMakeCleanCommandLine>
