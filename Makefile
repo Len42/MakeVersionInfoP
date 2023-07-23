@@ -19,7 +19,7 @@ PYCMD = py
 GITCMD = git
 
 # Rules to create header files with version info from corresponding template files
-.SUFFIXES: .txttemplate .htemplate .cstemplate
+.SUFFIXES: .txttemplate .htemplate .cstemplate .doxytemplate
 
 .txttemplate.txt:
 	$(PYCMD) "./make-version-file.py" $(VERSION_INFO) $@
@@ -28,4 +28,7 @@ GITCMD = git
 	$(PYCMD) "./make-version-file.py" $(VERSION_INFO) $@
 
 .cstemplate.cs:
+	$(PYCMD) "./make-version-file.py" $(VERSION_INFO) $@
+
+.doxytemplate.doxy:
 	$(PYCMD) "./make-version-file.py" $(VERSION_INFO) $@
